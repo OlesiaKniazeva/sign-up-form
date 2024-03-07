@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Austina';
+  src: url(/fonts/austina-webfont.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'Cormorant_Garamond';
+  src: url('fonts/Cormorant_Garamond/CormorantGaramond-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cormorant_Garamond';
+  src: url('fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(253, 246, 249, 0.674);
+  font-family: 'Cormorant_Garamond', sans-serif;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 25vh;
+}
+
+.card-container .card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  z-index: -1;
+}
+
+.card-container .card-logo-container {
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  background-color: #43383d;
+  opacity: 0.7;
+  color: white;
+}
+
+.logo-container {
+  border: aqua solid 1px;
+  position: relative;
+  width: 100%;
+  /*height: 100%; */
+  padding: 1rem 1rem;
+  /* display: flex;
+  align-items: center;
+  flex-wrap: wrap; */
+  /* justify-content: space-between; */
+}
+
+.logo-container .img-container {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.logo-container .card-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-container .card-paragraph {
+  font-family: "Austina";
+  font-size: 3rem;
+  position: absolute;
+  left: 30%;
+  margin: 0;
+}
+
+.sign-up-form-header,
+.sign-up-form {
+  margin: 1rem 2rem;
+}
+
+.sign-up-form {
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  body {
+    display: flex;
+  }
+
+  .card-container {
+    /* width:50%; */
+    flex: 1;
+    height: 100vh;
+    min-width: 300px;
+  }
+
+  .right-side-desctop {
+    flex: 2;
+  }
+
+  .card-container .card-logo-container {
+    width: 100%;
+    top: 8rem;
+    height: 30%;
+  }
+}
