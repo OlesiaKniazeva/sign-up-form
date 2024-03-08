@@ -1,22 +1,39 @@
 @font-face {
-  font-family: 'Austina';
+  font-family: "Austina";
   src: url(/fonts/austina-webfont.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: 'Cormorant_Garamond';
-  src: url('fonts/Cormorant_Garamond/CormorantGaramond-Light.ttf') format('truetype');
+  font-family: "Cormorant_Garamond";
+  src: url("fonts/Cormorant_Garamond/CormorantGaramond-Light.ttf")
+    format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Cormorant_Garamond';
-  src: url('fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: "Cormorant_Garamond";
+  src: url("fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Cormorant_Garamond";
+  src: url("fonts/Cormorant_Garamond/CormorantGaramond-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant_Garamond";
+  src: url("fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 
 html {
   box-sizing: border-box;
@@ -32,85 +49,139 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgba(253, 246, 249, 0.674);
-  font-family: 'Cormorant_Garamond', sans-serif;
+  font-family: "Cormorant_Garamond", sans-serif;
 }
 
 .card-container {
   position: relative;
   width: 100%;
-  height: 25vh;
+  height: 30vh;
 }
 
 .card-container .card-image {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;  
+  object-fit: cover;
   z-index: -1;
 }
 
 .card-container .card-logo-container {
-  position: absolute;
-  width: 60%;
-  height: 70%;
-  background-color: #43383d;
-  opacity: 0.7;
-  color: white;
-}
-
-.logo-container {
-  border: aqua solid 1px;
-  position: relative;
   width: 100%;
-  /*height: 100%; */
-  padding: 1rem 1rem;
-  /* display: flex;
+  height: 100%;
+  background-color: #43383d;
+  opacity: 0.8;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap; */
-  /* justify-content: space-between; */
+  gap: 3rem;
+  padding: 0.5rem 1rem;
 }
 
-.logo-container .img-container {
-  width: 50%;
+.logo-container,
+.card-paragraph {
   height: 100%;
-  position: relative;
 }
 
 .logo-container .card-logo {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
 }
 
-.logo-container .card-paragraph {
+.card-logo-container .card-paragraph {
   font-family: "Austina";
   font-size: 3rem;
-  position: absolute;
-  left: 30%;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.sign-up-form-header,
-.sign-up-form {
-  margin: 1rem 2rem;
+.sign-up-form-header {
+  margin: 40px;
+}
+
+.sign-up-form-header ol {
+  padding: 0 25px;
 }
 
 .sign-up-form {
   background-color: rgb(255, 255, 255);
+  padding: 50px;
+  margin: 0 0 40px 0;
 }
 
+.sign-up-form .form-header {
+  font-size: 2rem;
+  margin-bottom: 35px;
+}
 
+.sign-up-form .form-row {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 300px;
+}
 
-@media only screen and (min-width: 600px) {
+.sign-up-form .form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-row input {
+  background-color: #ffffff;
+  border: 1px solid #cbc2cb;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 17px;
+  font-family: inherit;
+}
+
+.form-row label {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.submit-button button {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #ffffff;
+  background-color: #9e628a;
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.submit-button button:hover {
+  background-color: #b5709e;
+}
+
+.submit-button button:active {
+  background-color: #9e628a;
+}
+
+@media only screen and (min-width: 700px) {
   body {
     display: flex;
   }
 
   .card-container {
-    /* width:50%; */
     flex: 1;
-    height: 100vh;
+    min-height: 100vh;
     min-width: 300px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
   }
 
   .right-side-desctop {
@@ -118,8 +189,53 @@ body {
   }
 
   .card-container .card-logo-container {
-    width: 100%;
-    top: 8rem;
     height: 30%;
+    justify-content: center;
+    margin-top: 20vh;
+    height: 20vh;
+    padding: 0.4rem;
+    gap: 1rem;
+  }
+
+  .card-logo-container .card-paragraph {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .sign-up-form .form-header {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .sign-up-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    gap: 40px;
+
+  }
+
+  .sign-up-form .form-row {
+    width: 250px;
+    height: initial;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 10px;
+  }
+
+  /* .sign-up-form .form-row:last-child {
+    margin-bottom: 40px;
+  } */
+}
+
+@media only screen and (max-width: 370px) {
+  .card-logo-container .card-paragraph {
+    font-size: 2.5rem;
+    line-height: 0.9;
+  }
+
+  .card-container .card-logo-container {
+    gap: 1rem;
   }
 }

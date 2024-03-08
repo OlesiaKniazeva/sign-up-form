@@ -18,11 +18,9 @@
       />
       <div class="card-logo-container">
         <div class="logo-container">
-          <div class="img-container">
-            <img class="card-logo" src="img/logo.png" alt="company logo" />
-          </div>
-          <p class="card-paragraph">Moon In Bloom</p>
+          <img class="card-logo" src="img/logo2.png" alt="company logo" />
         </div>
+        <p class="card-paragraph">Moon In Bloom</p>
       </div>
     </div>
     <div class="right-side-desctop">
@@ -52,18 +50,44 @@
             dates.
           </li>
         </ol>
-        <p>
-          Fill out the form below and let the blossoming journey with Moon In
-          Bloom begin!
-        </p>
       </header>
       <form class="sign-up-form" action="#" method="post">
-        <legend>Sign-up form</legend>
+        <legend class="form-header">Sign-up</legend>
+
         <div class="form-row">
-          <label for="full-name">Name</label>
-          <input type="text" name="full-name" id="full-name" />
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" id="first-name" />
+        </div>
+
+        <div class="form-row">
+          <label for="last-name">Last name</label>
+          <input type="text" name="last-name" id="last-name" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+
+        <div class="form-row">
+          <label for="phone-number">Phone Number</label>
+          <input type="tel" name="phone-number" id="phone-number" />
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password">
+        </div>
+
+        <div class="form-row">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" name="confirm-password" id="confirm-password">
         </div>
       </form>
+      <div class="submit-button">
+        <button type="submit">Create account</button>
+      </div>
+      <p>Already have an account? <a href="#">Log in</a></p>
     </div>
   </body>
 </html>
