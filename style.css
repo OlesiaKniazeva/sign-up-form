@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Austina";
-  src: url(/fonts/austina-webfont.woff2) format("woff2");
+  src: url(fonts/austina-webfont.woff2) format("woff2");
 }
 
 @font-face {
@@ -69,14 +69,13 @@ body {
 .card-container .card-logo-container {
   width: 100%;
   height: 100%;
-  background-color: #43383d;
-  opacity: 0.8;
+  background-color: #43383d7f;
   color: white;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 3rem;
-  padding: 0.5rem 1rem;
+  padding: 20px 0 20px 30px;
 }
 
 .logo-container,
@@ -85,18 +84,23 @@ body {
 }
 
 .logo-container .card-logo {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  opacity: 1;
 }
 
 .card-logo-container .card-paragraph {
   font-family: "Austina";
-  font-size: 3rem;
+  font-size: 10vw;
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.right-side-desktop {
+  width: 100%;
 }
 
 .sign-up-form-header {
@@ -127,10 +131,6 @@ body {
   max-width: 300px;
 }
 
-.sign-up-form .form-row:last-child {
-  margin-bottom: 0;
-}
-
 .form-row input {
   background-color: #ffffff;
   border: 1px solid #cbc2cb;
@@ -142,7 +142,7 @@ body {
 }
 
 .form-row label {
-  margin-bottom: 15px;
+  margin-bottom: 7px;
   font-weight: 500;
 }
 
@@ -168,7 +168,36 @@ body {
   background-color: #9e628a;
 }
 
+.container-sign-up {
+  margin-left: 50px;
+}
+
 @media only screen and (min-width: 700px) {
+  .sign-up-form .form-header {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .sign-up-form .form-rows-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 50px;
+    width: 650px;
+  }
+
+  .sign-up-form-header p {
+    margin-right: 80px;
+  }
+
+  .sign-up-form .form-row {
+    width: 250px;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
   body {
     display: flex;
   }
@@ -176,57 +205,35 @@ body {
   .card-container {
     flex: 1;
     min-height: 100vh;
-    min-width: 300px;
+    min-width: 350px;
+    max-width: 100%;
+
     position: sticky;
     top: 0;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
   }
 
-  .right-side-desctop {
+  .right-side-desktop {
     flex: 2;
   }
 
   .card-container .card-logo-container {
     height: 30%;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: 20vh;
-    height: 20vh;
+    background-color: #43383da4;
     padding: 0.4rem;
-    gap: 1rem;
+  }
+
+  .logo-container .card-logo {
+    width: 80%;
+    height: 80%;
   }
 
   .card-logo-container .card-paragraph {
-    font-size: 2rem;
+    font-size: 8vh;
   }
-}
-
-@media only screen and (min-width: 1000px) {
-  .sign-up-form .form-header {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .sign-up-form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 700px;
-    gap: 40px;
-
-  }
-
-  .sign-up-form .form-row {
-    width: 250px;
-    height: initial;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: 10px;
-  }
-
-  /* .sign-up-form .form-row:last-child {
-    margin-bottom: 40px;
-  } */
 }
 
 @media only screen and (max-width: 370px) {
@@ -237,5 +244,11 @@ body {
 
   .card-container .card-logo-container {
     gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .form-row:last-child {
+    margin-bottom: 0;
   }
 }

@@ -11,19 +11,19 @@
     <div class="card-container">
       <img
         class="card-image"
-        src="/img/bouquet.jpg"
+        src="img/bouquet.jpg"
         alt="flowershop's bouquet"
         width="800"
         height="1422.22"
       />
       <div class="card-logo-container">
         <div class="logo-container">
-          <img class="card-logo" src="img/logo2.png" alt="company logo" />
+          <img class="card-logo" src="img/logo.png" alt="company logo" />
         </div>
         <p class="card-paragraph">Moon In Bloom</p>
       </div>
     </div>
-    <div class="right-side-desctop">
+    <div class="right-side-desktop">
       <header class="sign-up-form-header">
         <h1>Welcome to Moon In Bloom!</h1>
         <p>Sign up now and become a part of Moon In Bloom!</p>
@@ -53,41 +53,48 @@
       </header>
       <form class="sign-up-form" action="#" method="post">
         <legend class="form-header">Sign-up</legend>
+        <div class="form-rows-container">
+          <div class="form-row">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" />
+          </div>
 
-        <div class="form-row">
-          <label for="first-name">First Name</label>
-          <input type="text" name="first-name" id="first-name" />
-        </div>
+          <div class="form-row">
+            <label for="last-name">Last name</label>
+            <input type="text" name="last-name" id="last-name" />
+          </div>
 
-        <div class="form-row">
-          <label for="last-name">Last name</label>
-          <input type="text" name="last-name" id="last-name" />
-        </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
 
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
-        </div>
+          <div class="form-row">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" name="phone-number" id="phone-number" />
+          </div>
 
-        <div class="form-row">
-          <label for="phone-number">Phone Number</label>
-          <input type="tel" name="phone-number" id="phone-number" />
-        </div>
+          <div class="form-row">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+          </div>
 
-        <div class="form-row">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password">
-        </div>
-
-        <div class="form-row">
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" name="confirm-password" id="confirm-password">
+          <div class="form-row">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+            />
+          </div>
         </div>
       </form>
-      <div class="submit-button">
-        <button type="submit">Create account</button>
+      <div class="container-sign-up">
+        <div class="submit-button">
+          <button type="submit">Create account</button>
+        </div>
+        <p>Already have an account? <a href="#">Log in</a></p>
       </div>
-      <p>Already have an account? <a href="#">Log in</a></p>
     </div>
   </body>
 </html>
