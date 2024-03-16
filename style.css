@@ -115,6 +115,8 @@ body {
   background-color: rgb(255, 255, 255);
   padding: 50px;
   margin: 0 0 40px 0;
+  box-shadow: 0 4px 5px rgba(142, 134, 140, 0.1),
+  0 -2px 7px rgba(142, 134, 140, 0.1); 
 }
 
 .sign-up-form .form-header {
@@ -132,6 +134,7 @@ body {
 }
 
 .form-row input {
+  outline: none;
   background-color: #ffffff;
   border: 1px solid #cbc2cb;
   border-radius: 3px;
@@ -148,7 +151,7 @@ body {
 
 .submit-button button {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
 
   color: #ffffff;
   background-color: #9e628a;
@@ -170,6 +173,42 @@ body {
 
 .container-sign-up {
   margin-left: 50px;
+}
+
+.container-sign-up a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.container-sign-up a:link {
+  color: #8f3669;
+}
+
+.container-sign-up a:visited {
+  color: #b37b9b;
+}
+
+.card-container .authors-annotations {
+ display: none;   
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #b74190;;
+}
+
+.form-row .error {
+  border: 2px solid rgb(193, 47, 47);
+}
+
+.form-row:last-child {
+  position: relative;
+}
+
+#password-error {
+  position: relative;
+  top: -30px;
+  font-size: 16px;
 }
 
 @media only screen and (min-width: 700px) {
@@ -210,6 +249,10 @@ body {
 
     position: sticky;
     top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .right-side-desktop {
@@ -217,7 +260,7 @@ body {
   }
 
   .card-container .card-logo-container {
-    height: 30%;
+    height: 15rem;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -233,6 +276,23 @@ body {
 
   .card-logo-container .card-paragraph {
     font-size: 8vh;
+    margin-top: -4rem;
+  }
+
+  .card-container .authors-annotations {
+    display: block;
+    color: white;
+    align-self: center;
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  .card-container .authors-annotations a {
+    color: white;
+  }
+  
+  .container-sign-up {
+    margin-bottom: 90px;
   }
 }
 
@@ -250,5 +310,10 @@ body {
 @media only screen and (max-width: 700px) {
   .form-row:last-child {
     margin-bottom: 0;
+  }
+
+  .form-row.last-name,
+  .form-row.phone-number {
+    margin-bottom: 70px;
   }
 }
